@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SonicSoul AI - AI音乐定制服务</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'Noto Sans SC', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                cyan: "#2af0ea", // TikTok Cyan
+                pink: "#ff0050", // TikTok Pink
+                dark: "#0f172a", // Slate 900
+              },
+              // Map legacy class names to new palette for compatibility
+              neon: {
+                400: "#2af0ea",
+                500: "#06b6d4",
+              },
+              dark: {
+                500: "#64748b",
+                600: "#475569",
+                700: "#334155",
+                800: "#1e293b", // Slate 800
+                900: "#0f172a", // Slate 900
+                950: "#020617",
+              },
+              surface: {
+                glass: "rgba(255, 255, 255, 0.08)",
+                glassHigh: "rgba(255, 255, 255, 0.15)",
+              }
+            },
+            animation: {
+              'float': 'float 10s ease-in-out infinite',
+              'float-delayed': 'float 12s ease-in-out 5s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                '33%': { transform: 'translate(30px, -50px) rotate(10deg)' },
+                '66%': { transform: 'translate(-20px, 20px) rotate(-5deg)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0f172a;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      
+      /* Modern Noise Texture */
+      .bg-noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Music-Creator-/assets/index-CSeqGUpz.js"></script>
+  <link rel="stylesheet" crossorigin href="/Music-Creator-/assets/index-BBOv-Xad.css">
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
