@@ -169,4 +169,4 @@ MIT License
 
 ---
 
-由 [SonicSoul AI](https://canadiancodecracker.github.io/Music-Creator-/) 制作 ❤️
+Built with ❤️ using [AI Studio](https://aistudio.google.com/apps) | 由 [SonicSoul AI](https://canadiancodecracker.github.io/Music-Creator-/) 制作
